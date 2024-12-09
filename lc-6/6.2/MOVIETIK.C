@@ -67,7 +67,7 @@ main()
      printf("Invalid time slot .plase try again .\n");
      goto pushpatimeslot;
       }
-       break;
+
 
 
 
