@@ -4,7 +4,7 @@ main()
 {
     int arr[5];
     int n;
-    int choice, value, position;
+    int choice, value, pos;
 
     printf("Enter array size:");
     scanf("%d", &n);
@@ -37,21 +37,24 @@ main()
         switch (choice)
         {
 
-            int m;
+         int size;
         case 1:
-            printf("Enter value how many mor dadte");
-            scanf("%d", &m);
+            printf("Enter value index :");
+            scanf("%d", &value);
+            printf("Enter value pos :");
+            scanf("%d", &pos);
 
-            for (int i = n; i < n + m; i++)
+            for (int i = pos; i < size;)
             {
-
-                printf("enter no:");
-                scanf("%d", &arr[i]);
+                  arr[i + 1] = arr[i];
             }
-            n = n + m;
+            size++;
+               
+              arr[pos] = value;
+
             break;
         case 2:
-            printf("\total no of data=%d", n);
+            printf("\total no of data=%d", size);
             break;
 
          int pos;
@@ -69,18 +72,11 @@ main()
             }
             break;
 
-        case 4:
-
-        for(i=pos-1)
-        {
-            
-        }
-
-        case 5:
-            printf("Exiting...\n");
-            return 0;
-        default:
-            printf("Invalid choice. Please try again.\n");
+        
         }
     }
-}
+}   
+        
+    
+    
+
